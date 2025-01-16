@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') { 
+            steps {
+                git branch: 'main', url: 'https://github.com/PrashantDongarwar/AWS-b10.git' 
+            }
+        }
+        stage('Build') { 
+            steps {
+                echo "Build sucessful" 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "Test complited"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo "Deploy successed" 
+            }
+        }
+    }
+}
